@@ -1,0 +1,100 @@
+.home {
+  margin-top: 80px;
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: rgb(45, 45, 45);
+}
+
+.main-content {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sidebar {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  flex-shrink: 0;
+}
+.filter-btn{
+  display: none;
+}
+
+.mobile-sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+  display: none;
+}
+
+.mobile-sidebar-overlay.visible {
+  display: block;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 30px;
+  right: 16px;
+  bottom: 20px;
+  width: calc(100% - 32px);
+  max-width: none;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.15);
+  z-index: 1001;
+  overflow-y: auto;
+  animation: slideIn 0.3s ease forwards;
+}
+
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  cursor: pointer;
+}
+
+
+
+@media (max-width: 769px) and (max-width: 1024px) {
+  .side-bar {
+    display: none;
+  }
+
+  .filter-btn{
+    display: flex;
+    margin-bottom: 25px;
+  }
+  .filter-btn button{
+    border: none;
+    background-color: rgb(0, 98, 255);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .mobile-sidebar {
+    top: 30px;
+    right: 16px;
+    bottom: 20px;
+    width: calc(100% - 32px);
+    max-width: none;
+    border-radius: 10px;
+  }
+}
